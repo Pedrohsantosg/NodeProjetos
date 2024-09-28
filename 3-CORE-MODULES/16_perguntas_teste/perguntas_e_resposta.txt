@@ -1,0 +1,97 @@
+1. O que são os core modules do Node.js?
+Resposta: São módulos embutidos no Node.js que oferecem funcionalidades essenciais, como manipulação de arquivos, rede, criptografia, etc., sem a necessidade de instalar pacotes externos.
+
+2. Quais são alguns dos core modules mais utilizados?
+Resposta: Alguns dos mais utilizados incluem `fs` (filesystem), `http`, `path`, `events`, `stream`, `buffer`, `os`, e `crypto`.
+
+3. Como importar um core module em um arquivo Node.js?
+Resposta: Você pode importar usando `require`. Por exemplo:
+const fs = require('fs');
+
+4. O que faz o módulo `fs`?
+Resposta: O módulo `fs` permite interagir com o sistema de arquivos, oferecendo métodos para ler, escrever, excluir arquivos e diretórios.
+
+5. O que é o módulo `http`?
+Resposta: O módulo `http` permite criar servidores e clientes HTTP, facilitando a construção de aplicações web.
+
+6. Como você cria um servidor HTTP simples usando o módulo `http`?
+Resposta:
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});
+
+7. O que faz o módulo `path`?
+Resposta: O módulo `path` fornece utilitários para manipulação de caminhos de arquivos e diretórios, como juntar, normalizar e extrair partes de um caminho.
+
+8. Como você combina dois caminhos usando o módulo `path`?
+Resposta:
+const path = require('path');
+
+const fullPath = path.join('/user', 'docs', 'file.txt');
+console.log(fullPath); // /user/docs/file.txt
+
+9. O que é o módulo `events`?
+Resposta: O módulo `events` permite trabalhar com o padrão de eventos do Node.js, permitindo a criação de objetos que emitem eventos.
+
+10. Como você cria um emissor de eventos usando o módulo `events`?
+Resposta:
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+myEmitter.on('event', () => {
+  console.log('An event occurred!');
+});
+
+myEmitter.emit('event'); // Saída: An event occurred!
+
+11. O que faz o módulo `stream`?
+Resposta: O módulo `stream` permite trabalhar com dados em fluxo, facilitando a leitura e escrita de dados de forma eficiente.
+
+12. Como você lê um arquivo usando streams?
+Resposta:
+const fs = require('fs');
+
+const readStream = fs.createReadStream('file.txt');
+readStream.on('data', (chunk) => {
+  console.log(`Received ${chunk.length} bytes of data.`);
+});
+
+13. O que é o módulo `buffer`?
+Resposta: O módulo `buffer` fornece uma maneira de manipular dados binários de forma eficiente, especialmente útil para trabalhar com streams.
+
+14. Como você cria um buffer a partir de uma string?
+Resposta:
+const buffer = Buffer.from('Hello, World!');
+console.log(buffer);
+
+15. O que faz o módulo `os`?
+Resposta: O módulo `os` fornece informações sobre o sistema operacional, como a quantidade de memória, informações de rede, e mais.
+
+16. Como você obtém informações sobre a memória livre usando o módulo `os`?
+Resposta:
+const os = require('os');
+
+const freeMemory = os.freemem();
+console.log(`Free memory: ${freeMemory} bytes`);
+
+17. O que é o módulo `crypto`?
+Resposta: O módulo `crypto` fornece funcionalidades de criptografia, como hashing, cifragem e geração de chaves.
+
+
+18- Os módulos que vem do Node são conhecidos como:
+Resposta: Core Modules
+
+19- O módulo que utilizamos para trabalhar com URLs é o:
+Resposta: url
+
+20- Podemos com Node.js encontrar o caminho (path) para algum arquivo do nosso projeto?
+Resposta: Sim, é possível com a ajuda do módulo path
+

@@ -1,0 +1,8 @@
+Para instalar um módulo por npm utilizamos o comando:
+R: npm install
+Para não levar módulos que não precisamos para o ambiente de produção, podemos utilizar a seguinte técnica:
+R: utilizar dependências de desenvolvimento
+Para executar uma série de comandos com npm em nosso projeto, podemos utilizar a seguinte técnica:
+R: Utilizar scripts
+
+

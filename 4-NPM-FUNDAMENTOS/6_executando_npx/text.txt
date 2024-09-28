@@ -1,0 +1,2 @@
+npx cowsay "Hello Word"
+npx cowsay -d "Morri"

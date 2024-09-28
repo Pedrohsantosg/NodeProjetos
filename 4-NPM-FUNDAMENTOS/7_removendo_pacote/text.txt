@@ -1,0 +1,2 @@
+npm uniinstall <nome>
+dependencies vazias
